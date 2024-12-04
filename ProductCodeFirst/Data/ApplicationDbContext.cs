@@ -12,8 +12,9 @@ namespace ProductCodeFirst.Data
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;database=Product;Trusted_Connection=true;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=.;database=CrudFirstCode;Trusted_Connection=true;TrustServerCertificate=True");
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }
